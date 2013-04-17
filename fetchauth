@@ -1,0 +1,6 @@
+
+function fetchauth() {
+ return 'root';
+}
+
+exports.fetchauth = fetchauth;
