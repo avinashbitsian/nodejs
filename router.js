@@ -1,11 +1,13 @@
-function route(pathname) {
+
+function route(pathname,username) {
   console.log("About to route a request for " + pathname);
-  var mysql = require('mysql');
+
+var mysql = require('mysql');
 var str=pathname.substring(1);
 var result;
 var connection = mysql.createConnection({
 host : 'localhost',
-user : 'root',
+user : username,
 password : 'bazinga420',
 });
 
@@ -21,6 +23,7 @@ connection.query('SELECT person_name.given_name, person.gender, person_address.a
 if (err) throw err;
 
 console.log('Query result: ', rows);
+
 });
 
 
