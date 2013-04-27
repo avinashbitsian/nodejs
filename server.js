@@ -14,8 +14,8 @@ function start(route) {
        request.on('end', function () {
         
           var values = JSON.parse(data);
-          var username = values.split(" ")[1].substring(1,values.split(" ")[1].length-1);
-		  var pass = values.split(" ")[2].substring(1,values.split(" ")[2].length-1);
+          var username = values.split(" ")[1];
+		  var pass = values.split(" ")[2];
 		  values = values.split(" ")[0];
           console.log("Request for " + values + " received.");
 		  console.log("username " + username);
