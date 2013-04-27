@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>search layer</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+    </head>
+    <body>
+  <script type="text/javascript">
+
+var username=JSON.stringify('admin');
+var password=JSON.stringify('Admin123');
+</script>
+        <script>
+		
+            function nodestart() {
+                var data = $('#querystr').val();
+				data+= ' '+username+' '+password;
+                $.ajax({
+                    datatype: 'JSON',
+                    type: 'POST',
+                    url: 'http://localhost:8585',
+                    data: JSON.stringify(data),
+                    success: function() {}
+                    }
+                });
+            }
+        </script>
+
+        <input type="text" id="querystr">
+        <input type="button" onclick="nodestart();" value="Search">
+        
+    </body>
+</html>
