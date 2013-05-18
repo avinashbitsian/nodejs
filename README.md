@@ -19,3 +19,7 @@ Here is a snapshot of the result.
 
 ![Alt text](https://dl.dropboxusercontent.com/u/50649632/sphinx_node.JPG "Sphinx with nodeJS module")
 
+
+Have a look at the basiccors implementation demo which can be used to send the basicAuthHeader set by Raxa from client to the searchlayer for authentication.
+(https://github.com/gizmoabhinav/cors)
+
